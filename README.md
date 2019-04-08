@@ -1,23 +1,26 @@
 # Pyt
 
-Homebrew PHP MVC Framewor
-todo
-env
-sessions
-database
-uri-segment
+## Homebrew PHP MVC Framewor
 
+### **ToDo
+- env
+- sessions
+- database
+- uri-segment
+
+### ** File Structure
 app
-- controllers
-- models
-- view
-- routes.php 
+    controllers
+    models
+    view
+    routes.php 
 core
-- load.php 
-- session.php
-- uri_segments.php 
+    load.php 
+    route.php
+    session.php
+    uri_segments.php 
 public
-- css
-- js 
+    css
+    js 
 index.php
 env.php
