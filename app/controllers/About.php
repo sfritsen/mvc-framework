@@ -1,6 +1,6 @@
 <?php
 
-class About {
+class About extends Controller {
 
     function __construct()
     {
