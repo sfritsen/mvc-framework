@@ -11,10 +11,10 @@
 ### ** File Structure
 ```
 app
-  controllers
-  models
-  view
-  routes.php
+    controllers
+    models
+    view
+    routes.php
 core
     load.php 
     route.php
@@ -25,3 +25,4 @@ public
     js 
 index.php
 env.php
+```
