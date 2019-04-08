@@ -12,6 +12,10 @@
     <body>
 
     <div class="test_text">Testing about full page</div>
+
+    <?php
+    echo $data['var2'];
+    ?>
     
     </body>
 </html>

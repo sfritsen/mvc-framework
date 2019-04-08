@@ -9,8 +9,9 @@ class About extends Controller {
 
     public function test1()
     {
-        $data = "variable loaded in controller";
-        Load::file()->view("about.php", $data);
+        $data['var1'] = "variable 1 loaded in controller";
+        $data['var2'] = "variable 2 loaded in controller";
+        Load::file()->view("about", $data);
     }
 
     public function test2()

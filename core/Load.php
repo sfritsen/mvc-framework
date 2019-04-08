@@ -23,7 +23,7 @@ class Load {
     public static function view($page, $data) 
     {
 
-        $path = './app/views/'.$page;
+        $path = './app/views/'.$page.'.php';
         require_once ( $path );
 
     }
