@@ -1,6 +1,6 @@
 # Pyt
 
-## Homebrew PHP MVC Framewor
+## Homebrew PHP MVC Framework
 
 ### **ToDo
 - [ ] env
@@ -15,6 +15,9 @@ app
     models
     view
     routes.php
+config
+    config.php
+    constants.php
 core
     load.php 
     route.php
