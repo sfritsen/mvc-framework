@@ -3,17 +3,18 @@
 ## Homebrew PHP MVC Framewor
 
 ### **ToDo
-- env
-- sessions
-- database
-- uri-segment
+- [ ] env
+- [ ] sessions
+- [ ] database
+- [ ] uri-segment
 
 ### ** File Structure
+```
 app
-    controllers
-    models
-    view
-    routes.php 
+  controllers
+  models
+  view
+  routes.php
 core
     load.php 
     route.php
