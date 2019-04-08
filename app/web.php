@@ -5,4 +5,6 @@ Route::get('about', function() {
     // echo "about route";
 });
 
+Route::get2('/about2', 'About@test');
+
 ?>

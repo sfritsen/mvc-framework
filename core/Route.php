@@ -14,4 +14,17 @@ class Route {
 
     }
 
+
+    public static function get2($route, $location) {
+
+        $split_location = explode("@", $location, 2);
+        $controller = $split_location[0];
+        $function = $split_location[1];
+
+        require('./app/controllers/'.$controller.'.php');
+        $load = new $controller();
+        $load->$function();
+
+    }
+
 }
