@@ -1,2 +1,7 @@
-RewriteEngine On
+Options +FollowSymLinks -MultiViews
+DirectoryIndex index.php
+RewriteEngine On 
+RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
