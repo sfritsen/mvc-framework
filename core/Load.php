@@ -3,28 +3,30 @@
 class Load {
 
     // Declare static private 
-    private static $_instance;
+    // static $test;
+    // private static $_instance;
 
-    protected function __construct()
+    public function __construct($page)
     {
         //Thou shalt not construct that which is unconstructable!
+        // self::$test = $page;
     }
 
     // Singleton object
-    public static function file() 
-    {
-        if (!self::$_instance) {
-            self::$_instance = new Load();
-        }
+    // public static function file() 
+    // {
+    //     if (!self::$_instance) {
+    //         self::$_instance = new Load();
+    //     }
 
-        return self::$_instance;
-    }
+    //     return self::$_instance;
+    // }
 
-    public static function view($page, $data) 
+    public static function view($page, $data = null) 
     {
 
         $path = './app/views/'.$page.'.php';
-        require_once ( $path );
+        include_once( $path );
 
     }
 

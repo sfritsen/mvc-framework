@@ -1,6 +1,6 @@
 <?php
 
-class Controller extends Pyt{
+class Pyt {
 
     /**
      * Constructor
@@ -9,6 +9,5 @@ class Controller extends Pyt{
      * @param array $data passed array
      */
 
-}
 
-?>
+}

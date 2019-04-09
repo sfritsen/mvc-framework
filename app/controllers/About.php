@@ -2,16 +2,15 @@
 
 class About extends Controller {
 
-    function __construct()
-    {
-
-    }
-
     public function test1()
     {
         $data['var1'] = "variable 1 loaded in controller";
         $data['var2'] = "variable 2 loaded in controller";
-        Load::file()->view("about", $data);
+        Load::view("about", $data);
+
+        // About::CreateView("partials/header", $data);
+        // About::CreateView("about", $data);
+        // About::CreateView("partials/footer");
     }
 
     public function test2()
