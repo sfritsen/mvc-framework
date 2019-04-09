@@ -6,7 +6,7 @@
 - [ ] env
 - [ ] sessions
 - [ ] database
-- [ ] uri-segment
+- [X] uri-segment
 
 ### ** File Structure
 ```
@@ -14,15 +14,16 @@ app
     controllers
     models
     view
-    routes.php
+    web.php
 config
     config.php
     constants.php
 core
-    load.php 
-    route.php
-    session.php
-    uri_segments.php 
+    Load.php 
+    Pyt.php
+    Route.php
+    Session.php
+    URI.php 
 public
     css
     js 
