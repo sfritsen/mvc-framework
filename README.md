@@ -33,3 +33,11 @@ env.php
 
 ### Help
 namespace https://www.youtube.com/watch?v=zTxz_kOLIZM
+
+### Sample htaccess
+```
+RewriteEngine On 
+RewriteCond $1 !^(images|css|js|robots\.txt|favicon\.ico) 
+RewriteCond %{REQUEST_URI} !\.(js|css)$
+RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
+```
