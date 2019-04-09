@@ -2,13 +2,13 @@
 
 ## Homebrew PHP MVC Framework
 
-### **ToDo
+### ToDo
 - [ ] env
 - [ ] sessions
 - [ ] database
 - [X] uri-segment
 
-### ** File Structure
+### File Structure
 ```
 app
     controllers

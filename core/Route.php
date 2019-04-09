@@ -8,7 +8,7 @@ class Route {
 
         self::$validRoutes[] = $route;
 
-         if ($_GET['url'] == $route) {
+        if ($_GET['url'] == $route) {
 
             $split_location = explode("@", $location, 2);
             $controller = $split_location[0];
