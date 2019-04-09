@@ -3,19 +3,19 @@
 class URI {
 
     // Declare static private 
-    private static $_instance = null;
+    // private static $_instance = null;
     
     // Singleton object
-    public static function segment() 
-    {
-        if (!self::$_instance) {
-            self::$_instance = new URI();
-        }
+    // public static function segment() 
+    // {
+    //     if (!self::$_instance) {
+    //         self::$_instance = new URI();
+    //     }
 
-        return self::$_instance;
-    }
+    //     return self::$_instance;
+    // }
 
-    public function get($section) 
+    public static function get($section) 
     {
 
         $get_uri = isset($_SERVER['REQUEST_URI']) ? explode('/', ltrim($_SERVER['REQUEST_URI'],'/')) : '/';

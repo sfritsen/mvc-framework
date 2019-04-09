@@ -6,3 +6,5 @@
  */
 $config['base_route'] = "About";
 $config['base_function'] = "test";
+
+$config['session'] = "session";

@@ -11,7 +11,7 @@ class About extends Controller {
 
     public function test2()
     {
-        $seg1 = URI::segment()->get('1');
+        $seg1 = URI::get('1');
         echo $seg1;
     }
 

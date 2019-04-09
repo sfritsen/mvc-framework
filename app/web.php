@@ -12,3 +12,5 @@
 Route::get('/', 'Login@index');
 Route::get('about1', 'About@test1');
 Route::get('about2', 'About@test2');
+
+Route::get('session', 'Login@set_session');
