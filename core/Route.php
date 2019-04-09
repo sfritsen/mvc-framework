@@ -2,13 +2,22 @@
 
 class Route {
 
-    public static $validRoutes = array();
+    public static $valid_routes = array();
 
     public static function get($route, $location) {
 
-        self::$validRoutes[] = $route;
+        $cleaned_route = ltrim($route, "/");
 
-        if ($_GET['url'] == $route) {
+        self::$valid_routes[$cleaned_route] = $location;
+
+        // echo "<pre>";
+        // print_r (self::$valid_routes);
+        // echo "</pre>";
+        // $get_url = $_GET['url'];
+
+        // echo $_GET['url'].' - '.$cleaned_route;
+
+        if ($_GET['url'] === $cleaned_route) {
 
             $split_location = explode("@", $location, 2);
             $controller = $split_location[0];
