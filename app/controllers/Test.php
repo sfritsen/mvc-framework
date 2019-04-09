@@ -1,6 +1,6 @@
 <?php
 
-class About extends Controller {
+class Test extends Controller {
 
     public function test1()
     {
@@ -11,15 +11,13 @@ class About extends Controller {
 
     public function test2()
     {
-        echo "Test 2";
+        Load::view("about");
     }
 
     public function test3()
     {
-        $seg1 = URI::get('1');
-        echo $seg1;
+        $seg = URI::get('1');
+        echo 'Segment: '.$seg;
     }
 
 }
-
-?>

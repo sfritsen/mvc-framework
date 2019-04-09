@@ -1,10 +1,11 @@
 <?php
 /**
- * Base Route
+ * =========================================================
+ * Master Configuration
+ * =========================================================
  *
- * Probably not needed since the default is set in the route
- */
-$config['base_route'] = "About";
-$config['base_function'] = "test";
-
+ * ??
+ * 
+ * @param ??
+*/
 $config['session'] = "session";

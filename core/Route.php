@@ -1,21 +1,23 @@
 <?php
 
+/**
+ * =========================================================
+ * Router
+ * =========================================================
+*/
+
 class Route {
 
+    // Creates a valid_routes array
     public static $valid_routes = array();
 
     public static function get($route, $location) {
 
+        // Clean up the supplied route to allow optional backslash
         $cleaned_route = ltrim($route, "/");
 
+        // Stores route in array
         self::$valid_routes[$cleaned_route] = $location;
-
-        // echo "<pre>";
-        // print_r (self::$valid_routes);
-        // echo "</pre>";
-        // $get_url = $_GET['url'];
-
-        // echo $_GET['url'].' - '.$cleaned_route;
 
         if ($_GET['url'] === $cleaned_route) {
 

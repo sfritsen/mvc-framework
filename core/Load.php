@@ -25,7 +25,7 @@ class Load {
     public static function view($page, $data = null) 
     {
 
-        $path = './app/views/'.$page.'.php';
+        $path = PYT_VIEWS_FOLDER.$page.'.php';
         include_once( $path );
 
     }

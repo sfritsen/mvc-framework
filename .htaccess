@@ -1,4 +1,4 @@
 RewriteEngine On 
-RewriteCond $1 !^(images|css|js|robots\.txt|favicon\.ico)
-RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond $1 !^(images|css|js|robots\.txt|favicon\.ico) 
+RewriteCond %{REQUEST_URI} !\.(js|css)$
 RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
