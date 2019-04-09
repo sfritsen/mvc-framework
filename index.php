@@ -15,6 +15,7 @@
  *
  */
 define('ENVIRONMENT', 'development');
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -52,13 +53,9 @@ if (defined('ENVIRONMENT')) {
 // Required files
 require_once __DIR__.'/config/constants.php';
 require_once __DIR__.'/config/config.php';
-require_once('./app/web.php');
+require_once __DIR__.'/app/web.php';
 
 function __autoload($class_name) {
-
-    // if (file_exists('./core/'.$class_name.'.php')) {
-    //     require_once './core/'.$class_name.'.php';
-	// }
 	
 	if (file_exists('./core/'.$class_name.'.php')) {
 		require_once './core/'.$class_name.'.php';
