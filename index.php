@@ -1,19 +1,19 @@
 <?php 
 /*
  *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
+ * Application Enviroment
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
- * current environment.
+ * environment that's set.
  *
- * Current usage is:
+ * Current selections are
  *
  *     development
  *     testing
  *     production
  *
- */
+*/
 define('ENVIRONMENT', 'development');
 
 /*
@@ -23,8 +23,7 @@ define('ENVIRONMENT', 'development');
  *
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
- */
-
+*/
 if (defined('ENVIRONMENT')) {
 	switch (ENVIRONMENT)
 	{
@@ -47,12 +46,7 @@ if (defined('ENVIRONMENT')) {
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
 
-// Get the URL and break it apart
-// $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'],'/')) : '/';
-
 // Required files
-require_once __DIR__.'/config/constants.php';
-require_once __DIR__.'/config/config.php';
 require_once __DIR__.'/app/web.php';
 
 function __autoload($class_name) {
@@ -64,3 +58,25 @@ function __autoload($class_name) {
 	}
     
 }
+
+// spl_autoload_register(function ($class) {
+//     if (file_exists(__DIR__.'/core/'.$class_name.'.php')) {
+// 		require_once __DIR__.'/core/'.$class_name.'.php';
+// 	} else if (file_exists(__DIR__.'/app/controllers/'.$class_name.'.php')) {
+// 		require_once __DIR__.'/app/controllers/'.$class_name.'.php';
+// 	}
+// });
+
+// function my_autoload($class_name) {
+
+// 	if (file_exists(__DIR__.'/core/'.$class_name.'.php')) {
+// 		require_once __DIR__.'/core/'.$class_name.'.php';
+// 	} else if (file_exists(__DIR__.'/app/controllers/'.$class_name.'.php')) {
+// 		require_once __DIR__.'/app/controllers/'.$class_name.'.php';
+// 	}
+   
+// }
+// spl_autoload_register('my_autoload');
+
+// Start a session
+// session_start();

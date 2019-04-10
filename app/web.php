@@ -8,10 +8,10 @@
  * You will need to setup a base route that will act as the index
  * for your application.  This is indicated by the index.php route.
  * 
- * @param Route index.php or /index.php
- * @param Controller@function
+ * @param string Route - index.php or /index.php
+ * @param string Controller@function
 */
-Route::get('/index.php', 'Login@index');
+Route::get('/index.php', 'Test@index');
 
 /**
  * =========================================================
@@ -20,8 +20,8 @@ Route::get('/index.php', 'Login@index');
  *
  * These are your routes for the application.
  * 
- * @param Route Leading backslash is optional
- * @param Controller@function
+ * @param string Route - Leading backslash is optional
+ * @param string Controller@function
 */
 Route::get('/views',        'Test@test1');
 Route::get('/variables',    'Test@test2');

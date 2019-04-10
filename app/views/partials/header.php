@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pyt Framework</title>
+        <title>PYT Framework</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="public/css/uikit.min.css" />
@@ -11,4 +11,8 @@
     </head>
     <body>
 
-    <p><?php echo $data['var1']; ?></p>
+    <p>
+        <a href="<?php echo APP_ROOT; ?>views">Test Views</a><br>
+        <a href="<?php echo APP_ROOT; ?>variables">Test Variables</a><br>
+        <a href="<?php echo APP_ROOT; ?>segments/43">Test Segments</a><br>
+    </p>
