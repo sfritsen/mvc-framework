@@ -29,8 +29,10 @@ class Test extends Controller {
     {
         $data = array(
             'sess_1' => 'sess_1_value',
-            'sess_2' => 'sess_2_value'
+            'sess_2' => 'sess_2_value',
+            'is_logged_in' => true
         );
+
         Session::setData($data);
 
         echo $_SESSION['sess_1'].' loaded from session!<br>';
@@ -44,6 +46,19 @@ class Test extends Controller {
         print_r($_SESSION);
         echo '</pre>';
 
+    }
+
+    public function session_test2()
+    {
+        echo '<pre>ENTIRE SESSION<br>';
+        print_r (Session::all());
+        echo '</pre>';
+    }
+
+    public function session_test3()
+    {
+        Session::destroy();
+        echo 'Session gone';
     }
 
 }

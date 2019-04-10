@@ -46,6 +46,9 @@ if (defined('ENVIRONMENT')) {
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
 
+// Start sessions
+session_start();
+
 // Required files
 require_once __DIR__.'/app/web.php';
 
@@ -77,6 +80,3 @@ function __autoload($class_name) {
    
 // }
 // spl_autoload_register('my_autoload');
-
-// Start a session
-// session_start();

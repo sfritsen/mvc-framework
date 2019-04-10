@@ -3,10 +3,13 @@
 ## Homebrew PHP MVC Framework
 
 ### ToDo
-- [ ] env
-- [ ] sessions
+- [ ] env ??
+- [X] sessions
 - [ ] database
-- [X] uri-segment
+- [X] uri segments
+- [ ] models
+- [ ] spl_autoload_register
+- [ ] namespaces
 
 ### File Structure
 ```
@@ -16,11 +19,11 @@ app
     view
     web.php
 config
-    config.php
     constants.php
 core
-    Load.php 
-    Pyt.php
+    Load.php
+    PYT_Config.php 
+    PYT_Core.php
     Route.php
     Session.php
     URI.php 
