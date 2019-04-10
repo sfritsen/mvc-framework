@@ -26,3 +26,5 @@ Route::get('/index.php', 'Test@index');
 Route::get('/views',        'Test@test1');
 Route::get('/variables',    'Test@test2');
 Route::get('/segments',     'Test@test3');
+
+Route::get('/session_set',  'Test@session_test');

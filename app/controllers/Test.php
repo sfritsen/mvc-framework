@@ -25,4 +25,25 @@ class Test extends Controller {
         echo 'Simple echo with Segment: '.$seg;
     }
 
+    public function session_test()
+    {
+        $data = array(
+            'sess_1' => 'sess_1_value',
+            'sess_2' => 'sess_2_value'
+        );
+        Session::setData($data);
+
+        echo $_SESSION['sess_1'].' loaded from session!<br>';
+
+        echo '<p>Using helper! >>> ';
+        $val = Session::get('sess_2');
+        echo $val;
+        echo '</p>';
+
+        echo '<pre>ENTIRE SESSION<br>';
+        print_r($_SESSION);
+        echo '</pre>';
+
+    }
+
 }
