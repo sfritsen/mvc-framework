@@ -50,33 +50,7 @@ if (defined('ENVIRONMENT')) {
 session_start();
 
 // Required files
+require_once __DIR__.'/core/AutoLoader.php';
 require_once __DIR__.'/app/web.php';
 
-function __autoload($class_name) {
-	
-	if (file_exists('./core/'.$class_name.'.php')) {
-		require_once './core/'.$class_name.'.php';
-	} else if (file_exists('./app/controllers/'.$class_name.'.php')) {
-		require_once './app/controllers/'.$class_name.'.php';
-	}
-    
-}
-
-// spl_autoload_register(function ($class) {
-//     if (file_exists(__DIR__.'/core/'.$class_name.'.php')) {
-// 		require_once __DIR__.'/core/'.$class_name.'.php';
-// 	} else if (file_exists(__DIR__.'/app/controllers/'.$class_name.'.php')) {
-// 		require_once __DIR__.'/app/controllers/'.$class_name.'.php';
-// 	}
-// });
-
-// function my_autoload($class_name) {
-
-// 	if (file_exists(__DIR__.'/core/'.$class_name.'.php')) {
-// 		require_once __DIR__.'/core/'.$class_name.'.php';
-// 	} else if (file_exists(__DIR__.'/app/controllers/'.$class_name.'.php')) {
-// 		require_once __DIR__.'/app/controllers/'.$class_name.'.php';
-// 	}
-   
-// }
-// spl_autoload_register('my_autoload');
+new Route;
