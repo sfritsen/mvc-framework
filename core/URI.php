@@ -2,18 +2,13 @@
 
 class URI {
 
-    public function __construct()
-    {
-        //Thou shalt not construct that which is unconstructable!
-    }
-
     /**
      * Gets the uri segement value
      * 
      * @param string $section - segment wanted
      * @return string 
     */
-    public static function get($section) 
+    public static function segment($section) 
     {
         // Retrieves the current URI and explodes it into $get_uri
         $get_uri = isset($_SERVER['REQUEST_URI']) ? explode('/', ltrim($_SERVER['REQUEST_URI'],'/')) : '/';

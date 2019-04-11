@@ -1,5 +1,4 @@
 # Pyt
-
 ## Homebrew PHP MVC Framework
 
 ### ToDo
@@ -10,7 +9,8 @@
 - [ ] models
 - [X] spl_autoload_register
 - [ ] namespaces ?? Not sure how with autoloading
-- [ ] Purge static methods
+- [ ] Purge static methods where applicable
+- [ ] Loading multiple views with $data passed to 1
 
 ### File Structure
 ```
@@ -21,6 +21,7 @@ app
     web.php
 config
     constants.php
+    database.php
 core
     AutoLoader.php
     Load.php
@@ -33,11 +34,7 @@ public
     css
     js 
 index.php
-env.php
 ```
-
-### Help
-namespace https://www.youtube.com/watch?v=zTxz_kOLIZM
 
 ### Sample htaccess
 ```

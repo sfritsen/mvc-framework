@@ -2,11 +2,6 @@
 
 class Load {
 
-    public function __construct()
-    {
-        //Thou shalt not construct that which is unconstructable!
-    }
-
     /**
      * Loads model
      * 

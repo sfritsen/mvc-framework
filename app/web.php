@@ -11,7 +11,7 @@
  * @param string Route - index.php or /index.php
  * @param string Controller@function
 */
-Route::get('/index.php', 'Test@index');
+Route::get('/index.php',        'Welcome@index');
 
 /**
  * =========================================================
@@ -23,10 +23,12 @@ Route::get('/index.php', 'Test@index');
  * @param string Route - Leading backslash is optional
  * @param string Controller@function
 */
-Route::get('/views',        'Test@test1');
-Route::get('/variables',    'Test@test2');
-Route::get('/segments',     'Test@test3');
+Route::get('/welcome',          'Welcome@index');
 
-Route::get('/session_set',  'Test@session_test');
-Route::get('/session_check',  'Test@session_test2');
+Route::get('/views',            'Test@test1');
+Route::get('/variables',        'Test@test2');
+Route::get('/segments',         'Test@test3');
+
+Route::get('/session_set',      'Test@session_test');
+Route::get('/session_check',    'Test@session_test2');
 Route::get('/session_destroy',  'Test@session_test3');

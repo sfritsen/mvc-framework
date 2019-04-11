@@ -1,6 +1,11 @@
-html, body {
-    background-color: #f5f5f5;
+html {
     font-size: 16px;
-    height: 100%;
+} 
+body {
+    background-color: #fff;
+    font-size: 1rem;
     padding: 8px;
+}
+.logo_icon {
+    color: #1E87F0;
 }

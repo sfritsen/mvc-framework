@@ -1,22 +1,22 @@
 <?php
 /**
  * =========================================================
- * Router
+ * Route Fetcher 5000!
  * =========================================================
 */
 
 class Route {
 
-    // Creates a valid_routes array
-    public static $valid_routes = array();
+    // // DEBUGGING Creates a valid_routes array
+    // public static $valid_routes = array();
 
     public static function get($route, $location) {
 
         // Clean up the supplied route to allow optional backslash
         $cleaned_route = ltrim($route, "/");
 
-        // Stores route in array
-        self::$valid_routes[$cleaned_route] = $location;
+        // // DEGUGGING Stores route in array
+        // self::$valid_routes[$cleaned_route] = $location;
 
         if ($_GET['url'] === $cleaned_route) {
 
