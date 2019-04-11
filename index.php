@@ -18,7 +18,7 @@ define('ENVIRONMENT', 'development');
 
 /*
  *---------------------------------------------------------------
- * ERROR REPORTING
+ * Error Reporting
  *---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
@@ -52,5 +52,3 @@ session_start();
 // Required files
 require_once __DIR__.'/core/AutoLoader.php';
 require_once __DIR__.'/app/web.php';
-
-new Route;
