@@ -8,8 +8,9 @@
 - [ ] database
 - [X] uri segments
 - [ ] models
-- [ ] spl_autoload_register
-- [ ] namespaces
+- [X] spl_autoload_register
+- [ ] namespaces ?? Not sure how with autoloading
+- [ ] Purge static methods
 
 ### File Structure
 ```
@@ -21,6 +22,7 @@ app
 config
     constants.php
 core
+    AutoLoader.php
     Load.php
     PYT_Config.php 
     PYT_Core.php
