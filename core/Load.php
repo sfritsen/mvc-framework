@@ -1,6 +1,6 @@
 <?php
 
-class Load {
+class Load extends PYT_Core {
 
     /**
      * Loads model
@@ -23,6 +23,11 @@ class Load {
     {
         $path = PYT_VIEWS_FOLDER.$page.'.php';
         include_once( $path );
+    }
+
+    public function view2()
+    {
+        return "view2 yay";
     }
 
 }

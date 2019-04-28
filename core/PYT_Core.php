@@ -9,5 +9,9 @@ require_once('./config/constants.php');
 
 class PYT_Core {
 
+    public function __construct()
+    {
+        
+    }
 
 }
