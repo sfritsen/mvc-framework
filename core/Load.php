@@ -1,13 +1,13 @@
 <?php
 
-class Load extends PYT_Core {
+class Load {
 
     /**
-     * Loads model
+     * Loads requested model
      * 
      * @param string $modal
     */
-    public static function modal($modal) 
+    public function modal($modal) 
     {
         $path = PYT_MODALS_FOLDER.$modal.'.php';
         include_once( $path );
@@ -17,17 +17,29 @@ class Load extends PYT_Core {
      * Returns a view file
      * 
      * @param string $page - name of the file minus extension
-     * @param string $data - passed data from source
+     * @param array $data - array passed data from source
     */
-    public static function view($page, $data = null) 
+    public function view($page, $data = null)
     {
+        // Function to loop array for cleaning
+        function array_map_r( $func, $arr ) {
+            $newArr = array();
+
+            foreach( $arr as $key => $value ) {
+                $newArr[ $key ] = ( is_array( $value ) ? array_map_r( $func, $value ) : ( is_array($func) ? call_user_func_array($func, $value) : $func( $value ) ) );
+            }
+
+            return $newArr;
+        }
+
+        // Strip tags
+        $pyt_cleaned = array_map_r('strip_tags', $data);
+        
+        // Extract $data
+        extract($pyt_cleaned);
+
         $path = PYT_VIEWS_FOLDER.$page.'.php';
         include_once( $path );
-    }
-
-    public function view2()
-    {
-        return "view2 yay";
     }
 
 }

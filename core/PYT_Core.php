@@ -9,9 +9,9 @@ require_once('./config/constants.php');
 
 class PYT_Core {
 
-    public function __construct()
+    public function __construct() 
     {
-        
+        $this->load = new Load();
     }
 
 }

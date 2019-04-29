@@ -2,6 +2,11 @@
 
 class Test extends Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function index()
     {
         echo "Echo'd = Base application route";
@@ -9,7 +14,10 @@ class Test extends Controller {
 
     public function test1()
     {
-        Load::view("test_view");
+        $data['mytestvars'] = array('var1' => 'myvar1', 'var2' => 'myvar2');
+        $data['mytestarray'] = 'arrayVar';
+        $data['badstuff'] = '<script>alert("ohgod");</script>';
+        $this->load->view('test_view', $data);
     }
 
     public function test2()
