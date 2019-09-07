@@ -9,8 +9,10 @@
 - [ ] models
 - [X] spl_autoload_register
 - [ ] namespaces ?? Not sure how with autoloading
-- [ ] Purge static methods where applicable
+- [X] Purge static methods where applicable
 - [ ] Loading multiple views with $data passed to 1
+- [ ] Remove base /app/controllers/controller as it's not needed
+- [ ] Input sanitation
 
 ### File Structure
 ```
@@ -34,6 +36,7 @@ public
     css
     js 
 index.php
+htaccess
 ```
 
 ### Sample htaccess
