@@ -13,6 +13,7 @@ class PYT_Core {
     {
         $this->load = new Load();
         $this->session = new Session();
+        $this->uri = new URI();
     }
 
 }

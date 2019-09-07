@@ -25,9 +25,13 @@ Route::get('/index.php',        'Welcome@index');
 */
 Route::get('/welcome',          'Welcome@index');
 
-Route::get('/views',            'Test@test1');
-Route::get('/variables',        'Test@test2');
-Route::get('/segments',         'Test@test3');
+// Views testing
+Route::get('/index_test',       'Test_views@index');
+Route::get('/data_in_view',     'Test_views@data_in_view');
+Route::get('/variables',        'Test_views@test2');
+
+// URI testing
+Route::get('/segments',         'Test_uri@seg_test1');
 
 // Session testing
 Route::get('/session_set',      'Test_session@session_test');

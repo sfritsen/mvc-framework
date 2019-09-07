@@ -8,21 +8,27 @@ class URI {
      * @param string $section - segment wanted
      * @return string 
     */
-    public static function segment($section) 
+    public function segment($section)
     {
-        // Retrieves the current URI and explodes it into $get_uri
-        $get_uri = isset($_SERVER['REQUEST_URI']) ? explode('/', ltrim($_SERVER['REQUEST_URI'],'/')) : '/';
+        // Retrieves the current URI and explodes it
+        $get_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $uri_segments = explode('/', $get_uri);
 
         // Find the requested section from $section
-        if($section === '1') {
-            $seg = isset($get_uri[3])? $get_uri[3] : ''; // segment 1
-        }elseif($section === '2') {
-            $seg = isset($get_uri[4])? $get_uri[4] : ''; // segment 2
-        }elseif($section === '3') {
-            $seg = isset($get_uri[5])? $get_uri[5] : ''; // segment 3
+        // RESEARCH ternary operator for shorthand usage
+        if ($section === '1') {
+            $seg = isset($uri_segments[3]) ? $uri_segments[3] : '';
+        } elseif ($section === '2') {
+            $seg = isset($uri_segments[4]) ? $uri_segments[4] : '';
+        } elseif ($section === '3') {
+            $seg = isset($uri_segments[5]) ? $uri_segments[5] : '';
+        } elseif ($section === '4') {
+            $seg = isset($uri_segments[6]) ? $uri_segments[6] : '';
+        } elseif ($section === '5') {
+            $seg = isset($uri_segments[7]) ? $uri_segments[7] : '';
         }
 
-        // Returns the value found
+        // Returns the segment found
         return $seg;
     }
 
