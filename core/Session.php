@@ -7,9 +7,12 @@ class Session {
      * 
      * @param array $data
     */
-    public static function setData($data) {
+    public function setData($data) {
         // Sets the session_id into the current entity
         $_SESSION['session_id'] = session_id();
+
+        // Sets session update time
+        $_SESSION['session_updated'] = date("U");
 
         // Loop through supplied array
         foreach ($data as $key => $value) {
@@ -22,7 +25,7 @@ class Session {
      * 
      * @param array $data
     */
-    public static function unsetData($key) {
+    public function unsetData($key) {
         unset($_SESSION[$key]);
     }
 
@@ -32,7 +35,7 @@ class Session {
      * @param string $key
      * @return string $value
     */
-    public static function get($key) {
+    public function get($key) {
         $value = $_SESSION[$key];
         return $value;
     }
@@ -42,7 +45,7 @@ class Session {
      * 
      * @return array
     */
-    public static function all() {
+    public function all() {
         $value = $_SESSION;
         return $value;
     }
@@ -50,7 +53,7 @@ class Session {
     /**
      * Destroys the session
     */
-    public static function destroy() {
+    public function destroy() {
         session_destroy();
     }
 

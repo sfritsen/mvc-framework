@@ -3,17 +3,6 @@
 class Load {
 
     /**
-     * Loads requested model
-     * 
-     * @param string $modal
-    */
-    public function modal($modal) 
-    {
-        $path = PYT_MODALS_FOLDER.$modal.'.php';
-        include_once( $path );
-    }
-
-    /**
      * Returns a view file
      * 
      * @param string $page - name of the file minus extension
@@ -32,8 +21,9 @@ class Load {
             return $newArr;
         }
 
-        // Strip tags
+        // If data was supplied, stip tags and extract
         if ($data !== null) {
+            // Strip tags
             $pyt_cleaned = array_map_r('strip_tags', $data);
 
             // Extract $data
@@ -41,6 +31,17 @@ class Load {
         }
 
         $path = PYT_VIEWS_FOLDER.$page.'.php';
+        include_once( $path );
+    }
+    
+    /**
+     * Loads requested model
+     * 
+     * @param string $modal
+    */
+    public function modal($modal) 
+    {
+        $path = PYT_MODALS_FOLDER.$modal.'.php';
         include_once( $path );
     }
 

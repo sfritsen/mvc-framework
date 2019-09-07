@@ -12,6 +12,7 @@ class PYT_Core {
     public function __construct() 
     {
         $this->load = new Load();
+        $this->session = new Session();
     }
 
 }
