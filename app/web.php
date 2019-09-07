@@ -12,6 +12,7 @@
  * @param string Controller@function
 */
 Route::get('/index.php',        'Welcome@index');
+// $this->route->get('/index.php',        'Welcome@index');
 
 /**
  * =========================================================
@@ -23,12 +24,11 @@ Route::get('/index.php',        'Welcome@index');
  * @param string Route - Leading backslash is optional
  * @param string Controller@function
 */
-Route::get('/welcome',          'Welcome@index');
 
 // Views testing
 Route::get('/index_test',       'Test_views@index');
 Route::get('/data_in_view',     'Test_views@data_in_view');
-Route::get('/variables',        'Test_views@test2');
+Route::get('/variables',        'Test_views@constant_variable');
 
 // URI testing
 Route::get('/segments',         'Test_uri@seg_test1');
@@ -38,3 +38,6 @@ Route::get('/session_set',      'Test_session@session_test');
 Route::get('/session_single',   'Test_session@set_single');
 Route::get('/session_check',    'Test_session@session_test2');
 Route::get('/session_destroy',  'Test_session@session_test3');
+
+// Error testing
+Route::get('/error1',           'Test_errors@error1');

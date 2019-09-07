@@ -9,7 +9,7 @@ class Test_views extends Controller {
 
     public function index()
     {
-        echo "Echo'd = Base application route";
+        echo "Base index route of controller";
     }
 
     public function data_in_view()
@@ -20,7 +20,7 @@ class Test_views extends Controller {
         $this->load->view('test_view', $data);
     }
 
-    public function test2()
+    public function constant_variable()
     {
         $data['var1'] = "Variable 1 sent from controller";
         $data['constant'] = TEST_GLOBAL;

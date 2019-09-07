@@ -4,18 +4,17 @@
     <title>PYT Framework</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="public/css/uikit.min.css" />
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
     <link rel="stylesheet" href='public/css/default.css' />
-    <script src="public/js/uikit.min.js"></script>
-    <script src="public/js/uikit-icons.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<article class="uk-article">
+    <h1 class="display-4">PYT Framework</h1>
+    <small class="text-muted">Developed by Stephen Fritsen</small>
+    <hr>
 
-    <h1 class="uk-article-title"><a class="uk-link-reset" href="">PYT Framework</a></h1>
-
-    <p class="uk-text-lead">
+    <p class="lead">
         The Danish word "Pyt" is usually expressed as an interjection in reaction to a daily hassle, 
         frustration or mistake.
     </p>
@@ -30,8 +29,6 @@
         Pyt is still in early development and was originally started as a learning project.  Please do not use Pyt 
         for production sites as many features are still missing.
     </p>
-
-</article>
 
 </body>
 </html>
