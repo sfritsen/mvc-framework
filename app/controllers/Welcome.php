@@ -4,7 +4,8 @@ class Welcome extends Controller {
 
     public function index()
     {
-        Load::view('welcome_view');
+        $data['testing'] = 'just test text';
+        $this->load->view('welcome_view', $data);
     }
 
 }

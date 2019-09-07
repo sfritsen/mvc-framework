@@ -33,10 +33,12 @@ class Load {
         }
 
         // Strip tags
-        $pyt_cleaned = array_map_r('strip_tags', $data);
-        
-        // Extract $data
-        extract($pyt_cleaned);
+        if ($data !== null) {
+            $pyt_cleaned = array_map_r('strip_tags', $data);
+
+            // Extract $data
+            extract($pyt_cleaned);
+        }
 
         $path = PYT_VIEWS_FOLDER.$page.'.php';
         include_once( $path );

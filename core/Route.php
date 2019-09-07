@@ -7,7 +7,7 @@
 
 class Route {
 
-    // // DEBUGGING Creates a valid_routes array
+    // DEBUGGING Creates a valid_routes array
     // public static $valid_routes = array();
 
     public static function get($route, $location) {
@@ -15,7 +15,7 @@ class Route {
         // Clean up the supplied route to allow optional backslash
         $cleaned_route = ltrim($route, "/");
 
-        // // DEGUGGING Stores route in array
+        // DEGUGGING Stores route in array
         // self::$valid_routes[$cleaned_route] = $location;
 
         if ($_GET['url'] === $cleaned_route) {
