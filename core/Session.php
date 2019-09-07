@@ -23,7 +23,7 @@ class Session {
     /**
      * Sets data into session
      * 
-     * @param array $data
+     * @param string $key
     */
     public function unsetData($key) {
         unset($_SESSION[$key]);
@@ -54,6 +54,7 @@ class Session {
      * Destroys the session
     */
     public function destroy() {
+        unset($_SESSION);
         session_destroy();
     }
 
