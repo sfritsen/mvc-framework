@@ -12,6 +12,8 @@
 
     <h1 class="display-4">PYT Framework</h1>
     <small class="text-muted">Developed by Stephen Fritsen</small>
+    <br>
+    <small class="text-muted">Version: Alpha</small>
     <hr>
 
     <p class="lead">

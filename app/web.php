@@ -12,7 +12,6 @@
  * @param string Controller@function
 */
 Route::get('/index.php',        'Welcome@index');
-// $this->route->get('/index.php',        'Welcome@index');
 
 /**
  * =========================================================
