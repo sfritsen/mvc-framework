@@ -19,7 +19,7 @@
 app
     controllers
     models
-    view
+    views
     web.php
 config
     constants.php

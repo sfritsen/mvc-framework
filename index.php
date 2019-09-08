@@ -1,4 +1,7 @@
-<?php 
+<?php
+// Start sessions
+session_start();
+
 /*
  *---------------------------------------------------------------
  * Application Enviroment
@@ -44,9 +47,6 @@ if (defined('ENVIRONMENT')) {
 // --------------------------------------------------------------------
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
-
-// Start sessions
-session_start();
 
 // Required files
 require_once __DIR__.'/core/AutoLoader.php';

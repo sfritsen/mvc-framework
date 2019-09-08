@@ -40,3 +40,4 @@ Route::get('/session_destroy',  'Test_session@session_test3');
 
 // Error testing
 Route::get('/error1',           'Test_errors@error1');
+Route::get('/dbtest',           'Test_errors@dbtest');

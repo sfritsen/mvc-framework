@@ -14,4 +14,16 @@ class Test_errors extends Controller {
         Load::view('welcome_view');
     }
 
+    public function dbtest()
+    {
+        // $this->db->connect();
+        $ret = $this->db->query1("
+            SELECT * FROM users WHERE username = 'dfritsen'
+        ");
+
+        while ($row = $ret->fetch()) {
+            echo $row['first_name'].' '.$row['last_name']."<br>";
+        }
+    }
+
 }
