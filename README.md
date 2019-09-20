@@ -2,39 +2,28 @@
 ## Homebrew PHP MVC Framework
 
 ### ToDo
-- [ ] env ??
-- [X] sessions
-- [ ] database
+- [X] Cookie sessions
+- [ ] Database sessions
+- [X] database
+- [ ] Multiple database connections
 - [X] uri segments
-- [ ] models
+- [X] models
 - [X] spl_autoload_register
-- [ ] namespaces ?? Not sure how with autoloading
-- [X] Purge static methods where applicable
-- [ ] Loading multiple views with $data passed to 1
-- [ ] Remove base /app/controllers/controller as it's not needed
+- [ ] Share data to all views in 1 call
 - [ ] Input sanitation
+- [ ] Error handling & logging
+- [ ] Form validation
+- [ ] Documentation & comments
+- [ ] Helpers
+- [ ] CSRF protection
+- [ ] Move db login info into its own config
 
 ### File Structure
 ```
-app
-    controllers
-    models
-    views
-    web.php
-config
-    constants.php
-    database.php
-core
-    AutoLoader.php
-    Load.php
-    PYT_Config.php 
-    PYT_Core.php
-    Route.php
-    Session.php
-    URI.php 
-public
-    css
-    js 
+app (Routes file and MVC folders)
+config (User defined config files)
+core (Core framework)
+public (User css and js files.  Anything public facing)
 index.php
 htaccess
 ```
