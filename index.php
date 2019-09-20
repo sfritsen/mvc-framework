@@ -48,6 +48,6 @@ if (defined('ENVIRONMENT')) {
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
 
-// Required files
+require_once __DIR__.'/core/PYT_Config.php';
 require_once __DIR__.'/core/AutoLoader.php';
-require_once __DIR__.'/app/web.php';
+require_once __DIR__.'/app/routes.php';

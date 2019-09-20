@@ -2,6 +2,11 @@
 
 class Load {
 
+    public function __construct()
+    {
+        
+    }
+
     /**
      * Returns a view file
      * 
@@ -37,12 +42,13 @@ class Load {
     /**
      * Loads requested model
      * 
-     * @param string $modal
+     * @param string $model
     */
-    public function modal($modal) 
+    public function model($model) 
     {
-        $path = PYT_MODALS_FOLDER.$modal.'.php';
+        $path = PYT_MODELS_FOLDER.$model.'.php';
         include_once( $path );
+        $this->model = new $model();
     }
 
 }

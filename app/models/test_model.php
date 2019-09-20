@@ -1,17 +1,19 @@
 <?php
 
-class Test_model {
+class Test_model extends Model {
 
     public function __construct()
     {
-
+        parent::__construct();
     }
 
     public function get_users()
     {
-        $ret = $this->db->query1("
-            SELECT * FROM users WHERE username = 'dfritsen'
+        $ret = $this->db->query("
+            SELECT * FROM users
         ");
+
+        return $ret;
     }
 
 }

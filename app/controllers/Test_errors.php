@@ -16,14 +16,28 @@ class Test_errors extends Controller {
 
     public function dbtest()
     {
-        // $this->db->connect();
-        $ret = $this->db->query1("
-            SELECT * FROM users WHERE username = 'dfritsen'
-        ");
+        $this->model('test_model');
+        
+        // include('./app/models/test_model.php');
+        // $this->test_model = new Test_model();
 
-        while ($row = $ret->fetch()) {
-            echo $row['first_name'].' '.$row['last_name']."<br>";
-        }
+        // $ret = $this->db->query1("
+        //     SELECT * FROM users WHERE username = 'dfritsen'
+        // ");
+
+        // $ret = $this->test_model->get_users();
+
+        // while ($row = $ret->fetch()) {
+        //     echo $row['first_name'].' '.$row['last_name']."<br>";
+        // }
+
+        $data['records'] = $this->test_model->get_users();
+        $this->view('dbtest', $data);
+    }
+
+    public function testconfig()
+    {
+        $this->configz();
     }
 
 }

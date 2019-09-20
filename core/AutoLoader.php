@@ -1,4 +1,5 @@
 <?php
+
 /**
  * =========================================================
  * Auto Loading
@@ -15,8 +16,10 @@ spl_autoload_register(function ($class) {
     // If the file exists, load the class file
     if (file_exists('./core/' . $class . '.php')) {
         include './core/' . $class . '.php';
-	} elseif (file_exists('./app/controllers/' . $class . '.php')) {
-		include './app/controllers/' . $class . '.php';
+	} elseif (file_exists(PYT_CONTROLLERS_FOLDER . $class . '.php')) {
+		include PYT_CONTROLLERS_FOLDER . $class . '.php';
+	} elseif (file_exists(PYT_MODELS_FOLDER . $class . '.php')) {
+		include PYT_MODELS_FOLDER . $class . '.php';
 	}
 
 });

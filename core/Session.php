@@ -21,7 +21,7 @@ class Session {
     }
 
     /**
-     * Sets data into session
+     * Removes data from session
      * 
      * @param string $key
     */

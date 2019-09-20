@@ -6,7 +6,8 @@
  *
  * INDEX ROUTE
  * You will need to setup a base route that will act as the index
- * for your application.  This is indicated by the index.php route.
+ * or starting point for your application.  This is indicated 
+ * by the index.php route.
  * 
  * @param string Route - index.php or /index.php
  * @param string Controller@function

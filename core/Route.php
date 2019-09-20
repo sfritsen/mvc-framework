@@ -7,9 +7,6 @@
 
 class Route {
 
-    // DEBUGGING Creates a valid_routes array
-    // public static $valid_routes = array();
-
     public static function get($route, $location) {
 
         // Clean up the supplied route to allow optional backslash
@@ -24,7 +21,7 @@ class Route {
             $controller = $split_location[0];
             $function = $split_location[1];
 
-            include_once('./app/controllers/'.$controller.'.php');
+            include_once(PYT_CONTROLLERS_FOLDER.$controller.'.php');
 
             $load = new $controller();
             $load->$function();
