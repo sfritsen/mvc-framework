@@ -7,13 +7,15 @@ class Model {
 
     public function __construct() 
     {
-        $host = 'localhost';
-        $user = 'root';
-        $pass = '616461';
-        $db = 'framework';
-        $charset = 'utf8mb4';
+        // Get users database information
+        require('./config/database.php');
+        $host       = $config['database']['hostname'];
+        $user       = $config['database']['username'];
+        $pass       = $config['database']['password'];
+        $dbname     = $config['database']['dbname'];
+        $charset    = $config['database']['charset'];
 
-        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
