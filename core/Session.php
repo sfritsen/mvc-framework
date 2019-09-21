@@ -1,6 +1,11 @@
-<?php
+<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
 
 class Session {
+
+    public function __constant()
+    {
+        parent::__construct();
+    }
 
     /**
      * Sets data into session

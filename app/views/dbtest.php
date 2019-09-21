@@ -10,4 +10,8 @@
     </tbody>
 </table>
 
+<p>
+<?php echo $badstuff; ?>
+</p>
+
 <?php include('partials/footer.php'); ?>

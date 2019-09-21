@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
 
 class Test_errors extends Controller {
 
@@ -31,6 +31,7 @@ class Test_errors extends Controller {
         //     echo $row['first_name'].' '.$row['last_name']."<br>";
         // }
 
+        $data['badstuff'] = '<script>alert("ohgod");</script>';
         $data['records'] = $this->test_model->get_users();
         $this->view('dbtest', $data);
     }

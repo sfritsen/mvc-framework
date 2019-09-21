@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
 
 class Test_views extends Controller {
 
@@ -14,10 +14,14 @@ class Test_views extends Controller {
 
     public function data_in_view()
     {
+        $this->model('test_model');
+        $data['records'] = $this->test_model->get_users();
+
         $data['mytestvars'] = array('var1' => 'myvar1', 'var2' => 'myvar2');
         $data['mytestarray'] = 'arrayVar';
         $data['badstuff'] = '<script>alert("ohgod");</script>';
-        $this->load->view('test_view', $data);
+        // $this->load->view('test_view', $data);
+        $this->view('test_view', $data);
     }
 
     public function constant_variable()

@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
 /**
  * =========================================================
  * Master Configuration
@@ -68,10 +68,10 @@ $config['default_controller'] = 'welcome';
  * Database connection
  * ---------------------------------------------------------------------
  */
-$config['database'] = array(
-    'host' => 'localhost',
-    'user' => 'root',
-    'pass' => '616461',
-    'name' => 'framework',
-    'char' => 'utf8mb4'
-);
+// $config['database'] = array(
+//     'host' => 'localhost',
+//     'user' => 'root',
+//     'pass' => '616461',
+//     'name' => 'framework',
+//     'char' => 'utf8mb4'
+// );

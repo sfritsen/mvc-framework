@@ -48,6 +48,8 @@ if (defined('ENVIRONMENT')) {
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
 // --------------------------------------------------------------------
 
+define('BASE_PATH', str_replace("\\", "/", __DIR__));
 require_once __DIR__.'/core/PYT_Config.php';
 require_once __DIR__.'/core/AutoLoader.php';
+require_once __DIR__.'/config/constants.php';
 require_once __DIR__.'/app/routes.php';

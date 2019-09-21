@@ -1,8 +1,8 @@
-<?php
+<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
 
 class Model {
 
-    protected $db;
+    protected $_db;
     // protected $config;
 
     public function __construct() 
@@ -23,7 +23,7 @@ class Model {
         ];
 
         try {
-            $this->db = new PDO($dsn, $user, $pass, $options);
+            $this->_db = new PDO($dsn, $user, $pass, $options);
         } catch (PDOException $e) {
             echo 'Connection error: ' . $e->getMessage();
         }
@@ -32,15 +32,15 @@ class Model {
     // Runs provided query
     public function db_query($sql)
     {
-        $q = $this->db->query($sql);
-        return $q;
+        $query = $this->_db->query($sql);
+        return $query;
     }
 
     // Fetches single row
     public function db_query_row($sql)
     {
-        // $q = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
-        $q = $this->db->query($sql)->fetch(PDO::FETCH_ASSOC);    
+        // $q = $this->_db->query($sql)->fetch(PDO::FETCH_OBJ);
+        $q = $this->_db->query($sql)->fetch(PDO::FETCH_ASSOC);    
 
         return $q;
     }
