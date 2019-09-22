@@ -31,4 +31,16 @@ class Test_views extends Controller {
         $this->load->view("test_variables_view", $data);
     }
 
+    public function multipleviews()
+    {
+        $data['var1'] = "Var1 in controller with new views";
+        $data['constant'] = TEST_GLOBAL;
+        $files = array(
+            'partials/header',
+            'test_variables_view',
+            'partials/footer'
+        );
+        $this->view($files, $data);
+    }
+
 }

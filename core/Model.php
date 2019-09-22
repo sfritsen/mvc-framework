@@ -32,16 +32,22 @@ class Model {
     // Runs provided query
     public function db_query($sql)
     {
-        $query = $this->_db->query($sql);
-        return $query;
+        // $query = $this->_db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        // return $query;
+        $stmt = $this->_db->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
     }
 
     // Fetches single row
     public function db_query_row($sql)
     {
-        // $q = $this->_db->query($sql)->fetch(PDO::FETCH_OBJ);
-        $q = $this->_db->query($sql)->fetch(PDO::FETCH_ASSOC);    
-
-        return $q;
+        // $q = $this->_db->query($sql)->fetch(PDO::FETCH_ASSOC);    
+        // return $q;
+        $stmt = $this->_db->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data;
     }
 }

@@ -1,4 +1,4 @@
-<?php include('partials/header.php'); ?>
+<?php //include('partials/header.php'); ?>
 
     <div class="test_text">This is a test view loaded from /app/views/test_variables_view.php</div>
 
@@ -6,4 +6,4 @@
     <br>
     <?php echo "Constant variable: ".$data['constant']; ?>
     
-<?php include('partials/footer.php'); ?>
+<?php //include('partials/footer.php'); ?>

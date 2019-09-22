@@ -29,6 +29,7 @@ Route::get('/index.php',        'Welcome@index');
 Route::get('/index_test',       'Test_views@index');
 Route::get('/data_in_view',     'Test_views@data_in_view');
 Route::get('/variables',        'Test_views@constant_variable');
+Route::get('/multipleviews',    'Test_views@multipleviews');
 
 // URI testing
 Route::get('/segments',         'Test_uri@seg_test1');

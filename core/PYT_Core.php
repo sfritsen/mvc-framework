@@ -1,10 +1,10 @@
 <?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+
 /**
  * =========================================================
  * Master Controller
  * =========================================================
 */
-
 class PYT_Core {
 
     protected $config = [];
@@ -51,14 +51,16 @@ class PYT_Core {
             extract($pyt_cleaned);
         }
 
-        // if (is_array($data)) {
-        //     extract($data);
-        // } else {
-        //     $stripped_data = strip_tags($data);
-        //     extract($stripped_data);
-        // }
-
-        require(PYT_VIEWS_FOLDER . $view . '.php');
+        // If $view is array, loop through and require files
+        // Else, load the supplied view file
+        if (is_array($view)) {
+            foreach ($view as $file) {
+                require(PYT_VIEWS_FOLDER . $file . '.php');
+            }
+        } else {
+            require(PYT_VIEWS_FOLDER . $view . '.php');
+        }
+        
     }
 
 }
