@@ -9,7 +9,7 @@
 - [X] uri segments
 - [X] models
 - [X] spl_autoload_register
-- [ ] Share data to all views in 1 call
+- [X] Share data to all views in 1 call
 - [ ] Input sanitation
 - [ ] Error handling & logging
 - [ ] Form validation

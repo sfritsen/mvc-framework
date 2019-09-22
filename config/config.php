@@ -6,21 +6,7 @@
  *
  * Primary settings for the framework and your application.
  * DO NOT DELETE ANYTHING FROM THIS FILE!
-*/
-
-/**
- * =========================================================
- * Application Root
- * =========================================================
- *
- * This is the base or root of your application where PYT
- * is installed.
  * 
- * Must include trailing slash!
-*/
-// define('APP_ROOT', "http://192.168.1.210/pyt/");
-
-/**
  * ---------------------------------------------------------------------
  * Root application directory
  * ---------------------------------------------------------------------
@@ -30,7 +16,7 @@
  * 
  * No trailing slash!
  */
-$config['root_dir'] = '/var/www/html/mvc-framework';
+$config['root_dir'] = '/var/www/html/pyt';
 
 /**
  * ---------------------------------------------------------------------
@@ -38,11 +24,11 @@ $config['root_dir'] = '/var/www/html/mvc-framework';
  * ---------------------------------------------------------------------
  * 
  * Base application URL for your application.
- * Example: 'http://192.168.1.210/mvc-framework/';
+ * Example: 'http://192.168.1.210/my_application/';
  * 
  * Must include trailing slash!
  */
-$config['base_url'] = 'http://192.168.1.210/mvc-framework/';
+$config['base_url'] = 'http://192.168.1.210/pyt/';
 
 /**
  * ---------------------------------------------------------------------
@@ -50,9 +36,9 @@ $config['base_url'] = 'http://192.168.1.210/mvc-framework/';
  * ---------------------------------------------------------------------
  * 
  * Main cookie name for your application.
- * Cannot include numbers!
+ * Cannot include numbers or spaces!
  */
-$config['app_name'] = 'diy_framework';
+$config['app_name'] = 'pyt_framework';
 
 /**
  * ---------------------------------------------------------------------
@@ -65,13 +51,11 @@ $config['default_controller'] = 'welcome';
 
 /**
  * ---------------------------------------------------------------------
- * Database connection
+ * Session type
  * ---------------------------------------------------------------------
+ * 
+ * Choose which type of session you want.
+ * - cookie
+ * - database
  */
-// $config['database'] = array(
-//     'host' => 'localhost',
-//     'user' => 'root',
-//     'pass' => '616461',
-//     'name' => 'framework',
-//     'char' => 'utf8mb4'
-// );
+$config['session_type'] = 'database';

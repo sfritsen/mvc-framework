@@ -47,8 +47,8 @@ class PYT_Core {
         }
 
         if ($data) {
-            $pyt_cleaned = array_map_r('strip_tags', $data);
-            extract($pyt_cleaned);
+            $cleaned_data = array_map_r('strip_tags', $data);
+            extract($cleaned_data);
         }
 
         // If $view is array, loop through and require files
