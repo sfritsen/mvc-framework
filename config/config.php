@@ -60,3 +60,5 @@ $config['default_controller'] = 'welcome';
  * - database
  */
 $config['session_type'] = 'database';
+
+$config['csrf_status'] = true;

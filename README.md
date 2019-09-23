@@ -15,8 +15,8 @@
 - [ ] Form validation
 - [ ] Documentation & comments
 - [ ] Helpers
-- [ ] CSRF protection
-- [ ] Move db login info into its own config
+- [X] CSRF protection
+- [X] Move db login info into its own config
 
 ### File Structure
 ```

@@ -4,7 +4,7 @@
  * =========================================================
  * Master Controller
  * =========================================================
-*/
+ */
 class PYT_Core {
 
     protected $config = [];
@@ -13,19 +13,21 @@ class PYT_Core {
     protected $uri;
     protected $model;
     protected $view;
+    protected $csrf;
 
     public function __construct()
     {
-        // Required files
-        // require('./config/config.php');
-
-        // Load app config file
-        // $this->config = $config;
+        // Load main config file
+        require('./config/config.php');
+        $this->config = $config;
 
         // Load core functions
-        $this->load     = new Load();
+        $this->csrf     = new CSRF();
         $this->session  = new Session();
         $this->uri      = new URI();
+
+        // Create CSRF token
+        $this->csrf->token($this->config['csrf_status']);
     }
 
     public function model($model)
@@ -34,7 +36,7 @@ class PYT_Core {
         $this->$model = new $model();
     }
 
-    public function view ($view, $data = array())
+    public function view($view, $data = array())
     {
         // Function to map array
         function array_map_r( $func, $arr ) {

@@ -44,3 +44,7 @@ Route::get('/session_destroy',  'Test_session@session_test3');
 // Error testing
 Route::get('/error1',           'Test_errors@error1');
 Route::get('/dbtest',           'Test_errors@dbtest');
+
+// Form testing
+Route::get('csrf_test',         'Test_forms@csrf_test');
+Route::get('csrf_test_submit',  'Test_forms@csrf_test_submit');

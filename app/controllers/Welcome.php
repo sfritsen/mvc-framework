@@ -9,7 +9,7 @@ class Welcome extends Controller {
 
     public function index()
     {
-        $this->load->view('welcome_view');
+        $this->view('welcome_view');
     }
 
 }
