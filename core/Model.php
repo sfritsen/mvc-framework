@@ -3,7 +3,7 @@
 class Model {
 
     protected $_db;
-    // protected $config;
+    protected $config = [];
 
     public function __construct() 
     {

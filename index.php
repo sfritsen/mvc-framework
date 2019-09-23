@@ -16,7 +16,7 @@ session_start();
  *     testing
  *     production
  *
-*/
+ */
 define('ENVIRONMENT', 'development');
 
 /*
@@ -26,7 +26,7 @@ define('ENVIRONMENT', 'development');
  *
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
-*/
+ */
 if (defined('ENVIRONMENT')) {
 	switch (ENVIRONMENT) {
 		case 'development':
@@ -44,10 +44,11 @@ if (defined('ENVIRONMENT')) {
 	}
 }
 
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
-
+/**
+ * ---------------------------------------------------------------
+ * END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+ * ---------------------------------------------------------------
+ */
 define('BASE_PATH', str_replace("\\", "/", __DIR__));
 require_once __DIR__.'/core/PYT_Config.php';
 require_once __DIR__.'/core/AutoLoader.php';

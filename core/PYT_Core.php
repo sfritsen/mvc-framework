@@ -17,10 +17,10 @@ class PYT_Core {
     public function __construct()
     {
         // Required files
-        require('./config/config.php');
+        // require('./config/config.php');
 
         // Load app config file
-        $this->config = $config;
+        // $this->config = $config;
 
         // Load core functions
         $this->load     = new Load();
@@ -36,6 +36,7 @@ class PYT_Core {
 
     public function view ($view, $data = array())
     {
+        // Function to map array
         function array_map_r( $func, $arr ) {
             $newArr = array();
 
@@ -46,6 +47,7 @@ class PYT_Core {
             return $newArr;
         }
 
+        // If $data exists, run function and strip tags
         if ($data) {
             $cleaned_data = array_map_r('strip_tags', $data);
             extract($cleaned_data);
