@@ -9,6 +9,7 @@ class Model {
     {
         // Get users database information
         require('./config/database.php');
+
         $host       = $config['database']['hostname'];
         $user       = $config['database']['username'];
         $pass       = $config['database']['password'];
@@ -29,25 +30,36 @@ class Model {
         }
     }
 
+    private function close_db_connection()
+    {
+        $this->_db = null;
+    }
+
     // Runs provided query
     public function db_query($sql)
     {
-        // $query = $this->_db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-        // return $query;
         $stmt = $this->_db->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Close the connection
+        $this->close_db_connection();
+
+        // Return the results
         return $data;
     }
 
     // Fetches single row
     public function db_query_row($sql)
     {
-        // $q = $this->_db->query($sql)->fetch(PDO::FETCH_ASSOC);    
-        // return $q;
         $stmt = $this->_db->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Close the connection
+        $this->close_db_connection();
+
+        // Return the results
         return $data;
     }
 }

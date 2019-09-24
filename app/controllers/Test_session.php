@@ -16,7 +16,7 @@ class Test_session extends Controller {
         );
 
         // PYT_Core::setData($data);
-        $this->session->setData($data);
+        $this->session->set($data);
 
         echo $_SESSION['sess_1'].' loaded from session!<br>';
 
@@ -34,7 +34,7 @@ class Test_session extends Controller {
     public function set_single()
     {
         $data = array('single_param' => 'My Single Paramater!');
-        $this->session->setData($data);
+        $this->session->set($data);
     }
 
     public function session_test2()

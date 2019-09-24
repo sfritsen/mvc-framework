@@ -3,6 +3,8 @@
 class Session {
 
     protected $config = [];
+    protected $data;
+    protected $key;
 
     public function __construct()
     {
@@ -17,7 +19,7 @@ class Session {
      * Sets data into session
      * @param array $data
     */
-    public function setData($data) 
+    public function set($data) 
     {
         // Sets the session_id into the current entity
         $_SESSION['session_id'] = session_id();
@@ -38,7 +40,7 @@ class Session {
      * Removes data from session
      * @param string $key
     */
-    public function unsetData($key) 
+    public function unset($key) 
     {
         unset($_SESSION[$key]);
     }
@@ -60,8 +62,7 @@ class Session {
     */
     public function all() 
     {
-        $value = $_SESSION;
-        return $value;
+        return $_SESSION;
     }
 
     /**
