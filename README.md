@@ -4,7 +4,6 @@
 ### ToDo
 - [X] Cookie sessions
 - [ ] Database sessions
-- [X] database
 - [ ] Multiple database connections
 - [X] uri segments
 - [X] models
@@ -15,8 +14,10 @@
 - [ ] Form validation
 - [ ] Documentation & comments
 - [ ] Helpers
-- [X] CSRF protection
+- [X] CSRF protection (needs work and form helper)
 - [X] Move db login info into its own config
+- [ ] Remove "PYT" references to allow for easier naming
+- [ ] Sessions = clean up method names
 
 ### File Structure
 ```

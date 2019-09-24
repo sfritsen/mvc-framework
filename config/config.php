@@ -1,9 +1,9 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 /**
- * =========================================================
+ * ---------------------------------------------------------------------
  * Master Configuration
- * =========================================================
+ * ---------------------------------------------------------------------
  *
  * Primary settings for the framework and your application.
  * DO NOT DELETE ANYTHING FROM THIS FILE!
@@ -61,4 +61,14 @@ $config['default_controller'] = 'welcome';
  */
 $config['session_type'] = 'database';
 
+/**
+ * ---------------------------------------------------------------------
+ * CSRF Protection
+ * ---------------------------------------------------------------------
+ * 
+ * Controls whether CSRF protection is enabled or not.
+ * 
+ * On   = true
+ * Off  = false
+ */
 $config['csrf_status'] = true;

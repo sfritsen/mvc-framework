@@ -1,9 +1,15 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 class URI {
 
+    protected $get_uri;
+    protected $seg;
+    protected $uri_segments;
+
     /**
      * Gets the uri segement value
+     * 
+     * Can handle up to 5 segments currently
      * 
      * @param string $section - segment wanted
      * @return string 

@@ -1,11 +1,20 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
+
 /**
- * =========================================================
+ * ---------------------------------------------------------------------
  * Route Fetcher 5000!
- * =========================================================
+ * ---------------------------------------------------------------------
 */
 
 class Route {
+
+    protected $route;
+    protected $location;
+    protected $cleaned_route;
+    protected $split_location = [];
+    protected $controller;
+    protected $function;
+    protected $load;
 
     public static function get($route, $location) {
 

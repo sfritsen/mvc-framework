@@ -1,14 +1,13 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 /**
- * =========================================================
- * Master Controller
- * =========================================================
+ * ---------------------------------------------------------------------
+ * Master Core Controller
+ * ---------------------------------------------------------------------
  */
 class PYT_Core {
 
-    protected $config = [];
-    protected $load;
+    // protected $config = [];
     protected $session;
     protected $uri;
     protected $model;

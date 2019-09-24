@@ -1,4 +1,4 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 class Session {
 
@@ -22,7 +22,7 @@ class Session {
         // Sets the session_id into the current entity
         $_SESSION['session_id'] = session_id();
 
-        // Load the app name supplied in config.php
+        // Loads app_name supplied in config.php
         $_SESSION['app_name'] = $this->config['app_name'];
 
         // Sets session update time
