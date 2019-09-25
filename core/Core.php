@@ -5,7 +5,7 @@
  * Master Core Controller
  * ---------------------------------------------------------------------
  */
-class PYT_Core {
+class Core {
 
     // protected $config = [];
     protected $session;
@@ -51,7 +51,7 @@ class PYT_Core {
 
     public function model($model)
     {
-        include(PYT_MODELS_FOLDER . $model . '.php');
+        include(MODELS_FOLDER . $model . '.php');
         $this->$model = new $model();
     }
 
@@ -78,10 +78,10 @@ class PYT_Core {
         // Else, load the supplied view file
         if (is_array($view)) {
             foreach ($view as $file) {
-                require(PYT_VIEWS_FOLDER . $file . '.php');
+                require(VIEWS_FOLDER . $file . '.php');
             }
         } else {
-            require(PYT_VIEWS_FOLDER . $view . '.php');
+            require(VIEWS_FOLDER . $view . '.php');
         }
         
     }

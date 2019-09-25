@@ -73,7 +73,7 @@ session_start();
  * Require manditory files
  * ---------------------------------------------------------------------
  */
-require_once BASE_PATH.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'PYT_Config.php';
+require_once BASE_PATH.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'Config.php';
 require_once BASE_PATH.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'AutoLoader.php';
 require_once BASE_PATH.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'constants.php';
 require_once BASE_PATH.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'routes.php';

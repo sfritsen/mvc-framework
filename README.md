@@ -21,7 +21,7 @@
 
 ### File Structure
 ```
-app (Routes file and MVC folders)
+app (Routes file, helpers and MVC folders)
 config (User defined config files)
 core (Core framework)
 public (User css and js files.  Anything public facing)

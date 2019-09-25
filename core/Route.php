@@ -30,7 +30,7 @@ class Route {
             $controller = ucfirst($split_location[0]);
             $function = strtolower($split_location[1]);
 
-            include_once(PYT_CONTROLLERS_FOLDER.$controller.'.php');
+            include_once(CONTROLLERS_FOLDER.$controller.'.php');
 
             $load = new $controller();
             $load->$function();

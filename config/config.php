@@ -75,9 +75,10 @@ $config['csrf_status'] = true;
 
 /**
  * ---------------------------------------------------------------------
- * Autoload Core Helpers
+ * Autoload Helpers
  * ---------------------------------------------------------------------
  * 
- * URL
+ * Comma separated
+ * Example: array('url', 'form');
  */
-$config['autoload_helpers'] = array('URL');
+$config['autoload_helpers'] = array('url');
