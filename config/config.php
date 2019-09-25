@@ -72,3 +72,12 @@ $config['session_type'] = 'database';
  * Off  = false
  */
 $config['csrf_status'] = true;
+
+/**
+ * ---------------------------------------------------------------------
+ * Autoload Core Helpers
+ * ---------------------------------------------------------------------
+ * 
+ * URL
+ */
+$config['autoload_helpers'] = array('URL');

@@ -12,12 +12,12 @@
 - [ ] Input sanitation
 - [ ] Error handling & logging
 - [ ] Form validation
-- [ ] Documentation & comments
-- [ ] Helpers
+- [ ] Documentation
+- [X] Helpers made to autoload based on config selection
 - [X] CSRF protection (needs work and form helper)
 - [X] Move db login info into its own config
 - [ ] Remove "PYT" references to allow for easier naming
-- [ ] Sessions = clean up method names
+- [X] Sessions = clean up method names
 
 ### File Structure
 ```

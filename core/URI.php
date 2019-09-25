@@ -22,15 +22,15 @@ class URI {
 
         // Find the requested section from $section
         // RESEARCH ternary operator for shorthand usage
-        if ($section === '1') {
+        if ($section === 1) {
             $seg = isset($uri_segments[3]) ? $uri_segments[3] : '';
-        } elseif ($section === '2') {
+        } elseif ($section === 2) {
             $seg = isset($uri_segments[4]) ? $uri_segments[4] : '';
-        } elseif ($section === '3') {
+        } elseif ($section === 3) {
             $seg = isset($uri_segments[5]) ? $uri_segments[5] : '';
-        } elseif ($section === '4') {
+        } elseif ($section === 4) {
             $seg = isset($uri_segments[6]) ? $uri_segments[6] : '';
-        } elseif ($section === '5') {
+        } elseif ($section === 5) {
             $seg = isset($uri_segments[7]) ? $uri_segments[7] : '';
         }
 

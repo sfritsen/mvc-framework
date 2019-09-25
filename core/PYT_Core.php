@@ -20,6 +20,11 @@ class PYT_Core {
         require('./config/config.php');
         $this->config = $config;
 
+        // Load requested helpes from config
+        foreach ($config['autoload_helpers'] as $helper_file) {
+            $this->helper($helper_file);
+        }
+
         // Load core functions
         $this->csrf     = new CSRF();
         $this->session  = new Session();
@@ -27,6 +32,21 @@ class PYT_Core {
 
         // Create CSRF token
         $this->csrf->token($this->config['csrf_status']);
+    }
+
+    /**
+     * Loads requested helper file
+     * @param string helper
+     */
+    public function helper($helper = null)
+    {
+        if (file_exists(CORE_HELPERS_FOLDER.$helper.'.php')) {
+            include(CORE_HELPERS_FOLDER.$helper.'.php');
+        } elseif (file_exists(HELPERS_FOLDER.$helper.'.php')) {
+            include(HELPERS_FOLDER.$helper.'.php');
+        } else {
+            echo 'Helper file not found: '.$helper.'.php';
+        }
     }
 
     public function model($model)
