@@ -47,4 +47,4 @@ Route::get('/dbtest',           'Test_errors@dbtest');
 
 // Form testing
 Route::get('csrf_test',         'Test_forms@csrf_test');
-Route::get('csrf_test_submit',  'Test_forms@csrf_test_submit');
+Route::post('csrf_test_submit',  'Test_forms@csrf_test_submit');

@@ -16,8 +16,8 @@ class Route {
     protected $function;
     protected $load;
 
-    public static function get($route, $location) {
-
+    public static function get($route, $location) 
+    {
         // Clean up the supplied route to allow optional backslash
         $cleaned_route = ltrim($route, "/");
 
@@ -37,6 +37,36 @@ class Route {
 
         }
 
+    }
+
+    public static function post($route, $location) 
+    {
+        // Get config
+        require('./config/config.php');
+
+        // See if CSRF is enabled
+        if ($config['csrf_status'] === true) {
+
+            // Check if $_POST has a token
+            if (isset($_POST['csrf_token'])) {
+
+                // Token found, now compare to session
+                if ($_SESSION['csrf_token'] === $_POST['csrf_token']) {
+                    // They match!
+                    Route::get($route, $location);
+                } else {
+                    // No match, exit and display message
+                    exit('SESSION and CSRF tokens do not match');
+                }
+
+            } else {
+                exit('No CSRF token in POST was found');
+            }
+
+        } elseif ($config['csrf_status'] === false) {
+            // If CSRF is false, just go to normal get route
+            Route::get($route, $location);
+        }
     }
 
 }
