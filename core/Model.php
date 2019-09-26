@@ -2,7 +2,7 @@
 
 class Model {
 
-    protected $_db;
+    private $_db;
     protected $config = [];
 
     public function __construct() 
@@ -36,7 +36,7 @@ class Model {
     }
 
     // Runs provided query
-    public function db_query($sql)
+    protected function db_query($sql)
     {
         $stmt = $this->_db->prepare($sql);
         $stmt->execute();
@@ -50,7 +50,7 @@ class Model {
     }
 
     // Fetches single row
-    public function db_query_row($sql)
+    protected function db_query_row($sql)
     {
         $stmt = $this->_db->prepare($sql);
         $stmt->execute();

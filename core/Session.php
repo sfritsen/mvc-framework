@@ -3,8 +3,8 @@
 class Session {
 
     protected $config = [];
-    protected $data;
-    protected $key;
+    protected $data = '';
+    protected $key = '';
 
     public function __construct()
     {

@@ -2,9 +2,9 @@
 
 class URI {
 
-    protected $get_uri;
-    protected $seg;
-    protected $uri_segments;
+    private $get_uri;
+    private $seg;
+    private $uri_segments = [];
 
     /**
      * Gets the uri segement value

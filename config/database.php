@@ -9,8 +9,8 @@
 */
 $config['database'] = array(
     'hostname'  => 'localhost',
-    'username'  => 'root',
-    'password'  => '616461',
+    'username'  => 'framework_user',
+    'password'  => 'framework_pass',
     'dbname'    => 'framework',
     'charset'   => 'utf8mb4'
 );

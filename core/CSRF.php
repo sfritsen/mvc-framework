@@ -35,7 +35,7 @@ class CSRF {
         }
     }
 
-    public function _create_token()
+    private function _create_token()
     {
         $_SESSION['csrf_token'] = $this->csrf_token;
         $_SESSION['csrf_expire'] = $this->csrf_expire;

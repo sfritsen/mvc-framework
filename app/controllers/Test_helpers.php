@@ -24,4 +24,9 @@ class Test_helpers extends Controller {
         echo $c;
     }
 
+    public function baseurltest()
+    {
+        echo base_url();
+    }
+
 }

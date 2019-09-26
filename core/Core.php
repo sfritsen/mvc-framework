@@ -7,12 +7,13 @@
  */
 class Core {
 
-    // protected $config = [];
+    protected $config = [];
     protected $session;
     protected $uri;
     protected $model;
     protected $view;
     protected $csrf;
+    protected $helper;
 
     public function __construct()
     {
@@ -20,17 +21,17 @@ class Core {
         require('./config/config.php');
         $this->config = $config;
 
-        // Load requested helpes from config
+        // Auto loads requested helpers from config
         foreach ($config['autoload_helpers'] as $helper_file) {
             $this->helper($helper_file);
         }
 
-        // Load core functions
+        // Start core functions
         $this->csrf     = new CSRF();
         $this->session  = new Session();
         $this->uri      = new URI();
 
-        // Create CSRF token
+        // Sends status to token status check
         $this->csrf->token($this->config['csrf_status']);
     }
 
@@ -38,7 +39,7 @@ class Core {
      * Loads requested helper file
      * @param string helper
      */
-    public function helper($helper = null)
+    protected function helper($helper = null)
     {
         if (file_exists(CORE_HELPERS_FOLDER.$helper.'.php')) {
             include(CORE_HELPERS_FOLDER.$helper.'.php');
@@ -49,13 +50,22 @@ class Core {
         }
     }
 
-    public function model($model)
+    /**
+     * Loads requested model
+     * @param string model file
+     */
+    protected function model($model)
     {
         include(MODELS_FOLDER . $model . '.php');
         $this->$model = new $model();
     }
 
-    public function view($view, $data = array())
+    /**
+     * Loads requested view file
+     * @param mixed string or array
+     * @param array data
+     */
+    protected function view($view, $data = array())
     {
         // Function to map array
         function array_map_r( $func, $arr ) {
@@ -83,7 +93,5 @@ class Core {
         } else {
             require(VIEWS_FOLDER . $view . '.php');
         }
-        
     }
-
 }
