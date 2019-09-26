@@ -1,7 +1,7 @@
 <?php
 /**
  * ---------------------------------------------------------------------
- * PYT Framework
+ * DIY Framework
  * ---------------------------------------------------------------------
  * @author	Stephen Fritsen
  * @license	https://opensource.org/licenses/MIT
