@@ -36,7 +36,6 @@ class Route {
             $load->$function();
 
         }
-
     }
 
     public static function post($route, $location) 

@@ -16,8 +16,8 @@ spl_autoload_register(function ($class) {
     // If the file exists, load the class file
     if (file_exists('./core/' . $class . '.php')) {
         include './core/' . $class . '.php';
-	} elseif (file_exists(PYT_CONTROLLERS_FOLDER . $class . '.php')) {
-		include PYT_CONTROLLERS_FOLDER . $class . '.php';
+	} elseif (file_exists(CONTROLLERS_FOLDER . $class . '.php')) {
+		include CONTROLLERS_FOLDER . $class . '.php';
 	}
 
 });

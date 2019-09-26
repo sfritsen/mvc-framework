@@ -19,8 +19,8 @@ class Test_forms extends Controller {
 
     public function csrf_test_submit()
     {
-        echo 'SESSION: '.$_SESSION['csrf_token'].'<br>';
-        echo 'FORM TOKEN: '.$_POST['csrf_token'];
+        echo $_SESSION['csrf_token'].' (SESSION)<br>';
+        echo $_POST['csrf_token'].' (FORM)';
     }
 
 }

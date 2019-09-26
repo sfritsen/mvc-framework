@@ -13,7 +13,7 @@
  * @param string Route - index.php or /index.php
  * @param string Controller@function
 */
-Route::get('/index.php',        'Welcome@index');
+Route::get('/index.php', 'Welcome@testdefault');
 
 /**
  * ---------------------------------------------------------------------
@@ -24,6 +24,8 @@ Route::get('/index.php',        'Welcome@index');
  * 
  * @param string Route - Leading backslash is optional
  * @param string Controller@function
+ * 
+ * Example route: Route::get('/myroute, 'Controller@function');
 */
 
 // Views testing
@@ -34,10 +36,10 @@ Route::get('/multipleviews',    'Test_views@multipleviews');
 
 // URI testing
 Route::get('/segments',         'Test_uri@seg_test1');
-Route::get('/seg_pass1',         'Test_uri@seg_pass1');
-Route::get('/seg_pass2',         'Test_uri@seg_pass2');
-Route::get('/redirect_helper',      'Test_uri@redirect_helper');
-Route::get('/redirect_landing',     'Test_uri@redirect_landing');
+Route::get('/seg_pass1',        'Test_uri@seg_pass1');
+Route::get('/seg_pass2',        'Test_uri@seg_pass2');
+Route::get('/redirect_helper',  'Test_uri@redirect_helper');
+Route::get('/redirect_landing', 'Test_uri@redirect_landing');
 
 // Session testing
 Route::get('/session_set',      'Test_session@session_test');
@@ -50,5 +52,9 @@ Route::get('/error1',           'Test_errors@error1');
 Route::get('/dbtest',           'Test_errors@dbtest');
 
 // Form testing
-Route::get('/csrf_test',         'Test_forms@csrf_test');
-Route::post('/csrf_test_submit',  'Test_forms@csrf_test_submit');
+Route::get('/csrf_test',            'Test_forms@csrf_test');
+Route::post('/csrf_test_submit',    'Test_forms@csrf_test_submit');
+
+// Helpers testing
+Route::get('/epoch', 'Test_helpers@epoch');
+Route::get('/date2epoch', 'Test_helpers@date2epoch');

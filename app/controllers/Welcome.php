@@ -12,4 +12,9 @@ class Welcome extends Controller {
         $this->view('welcome_view');
     }
 
+    public function testdefault()
+    {
+        echo 'im a new default non index route!';
+    }
+
 }

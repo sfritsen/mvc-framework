@@ -11,7 +11,7 @@ class Test_errors extends Controller {
     {
         // Call non static method statically.  Should show depreciated error
         // Toggling enviorment to production gets rid of the error
-        Load::view('welcome_view');
+        print_r (Session::all());
     }
 
     public function dbtest()
