@@ -59,3 +59,4 @@ Route::post('/csrf_test_submit',    'Test_forms@csrf_test_submit');
 Route::get('/epoch', 'Test_helpers@epoch');
 Route::get('/date2epoch', 'Test_helpers@date2epoch');
 Route::get('/baseurltest', 'Test_helpers@baseurltest');
+Route::get('/mytesthelper', 'Test_helpers@mytesthelper');

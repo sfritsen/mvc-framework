@@ -29,4 +29,10 @@ class Test_helpers extends Controller {
         echo base_url();
     }
 
+    public function mytesthelper()
+    {
+        $this->helper('myhelper');
+        echo mytesthelper();
+    }
+
 }
