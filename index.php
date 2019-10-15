@@ -7,9 +7,7 @@
  * @license	https://opensource.org/licenses/MIT
  * @since	Version 0.0.1
  * 
- * DO NOT EDIT THIS LINE
- * All configuration options can be found in
- * /config
+ * All configuration options can be found in /config
  */
 
 /*

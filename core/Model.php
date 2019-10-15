@@ -35,7 +35,11 @@ class Model {
         $this->_db = null;
     }
 
-    // Runs provided query
+    /**
+     * Runs provided query
+     * @param string sql statement
+     * @return array
+     */
     protected function db_query($sql)
     {
         $stmt = $this->_db->prepare($sql);
@@ -49,7 +53,11 @@ class Model {
         return $data;
     }
 
-    // Fetches single row
+    /**
+     * Fetches single table row
+     * @param string sql statement
+     * @return array
+     */
     protected function db_query_row($sql)
     {
         $stmt = $this->_db->prepare($sql);

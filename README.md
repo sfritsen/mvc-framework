@@ -7,6 +7,7 @@
 - [ ] Error handling & logging
 - [ ] Form validation
 - [ ] Documentation
+- [ ] Possibly move Core methods to controller
 
 ### File Structure
 ```

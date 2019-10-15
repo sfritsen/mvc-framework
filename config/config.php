@@ -17,7 +17,7 @@
  * 
  * No trailing slash!
  */
-$config['root_dir'] = '/var/www/html/pyt';
+$config['root_dir'] = '';
 
 /**
  * ---------------------------------------------------------------------
@@ -25,11 +25,11 @@ $config['root_dir'] = '/var/www/html/pyt';
  * ---------------------------------------------------------------------
  * 
  * Base application URL for your application.
- * Example: 'http://192.168.1.210/my_application/';
+ * Example: 'http://192.168.1.10/my_application/';
  * 
  * Must include trailing slash!
  */
-$config['base_url'] = 'http://192.168.1.210/pyt/';
+$config['base_url'] = '';
 
 /**
  * ---------------------------------------------------------------------
@@ -39,7 +39,7 @@ $config['base_url'] = 'http://192.168.1.210/pyt/';
  * Main cookie name for your application.
  * Cannot include numbers or spaces!
  */
-$config['app_name'] = 'pyt_framework';
+$config['app_name'] = 'diy_framework';
 
 /**
  * ---------------------------------------------------------------------
