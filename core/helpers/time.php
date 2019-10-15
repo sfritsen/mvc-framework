@@ -24,7 +24,7 @@ function epoch2human($epoch, $option = null) {
 }
 
 /**
- * Takes supplied date and makes epoch time
+ * Takes supplied date/time and makes epoch time
  * @param string date/time
  * @return string epoch time
  */
