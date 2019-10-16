@@ -1,4 +1,4 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 class Welcome extends Controller {
 
@@ -9,7 +9,12 @@ class Welcome extends Controller {
 
     public function index()
     {
-        $this->view('welcome_view');
+       $files = array(
+           'partials/header',
+           'welcome_view',
+           'partials/footer'
+       );
+        $this->view($files);
     }
 
     public function testdefault()

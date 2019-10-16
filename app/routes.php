@@ -13,7 +13,7 @@
  * @param string Route - index.php or /index.php
  * @param string Controller@function
 */
-Route::get('/index.php', 'Welcome@testdefault');
+Route::get('/index.php', 'Welcome@index');
 
 /**
  * ---------------------------------------------------------------------

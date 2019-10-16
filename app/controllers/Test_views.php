@@ -1,4 +1,4 @@
-<?php if (!defined('BASE_PATH')) exit('No direct script access allowed');
+<?php defined('BASE_PATH') OR exit('No direct script access allowed');
 
 class Test_views extends Controller {
 
@@ -28,7 +28,7 @@ class Test_views extends Controller {
     {
         $data['var1'] = "Variable 1 sent from controller";
         $data['constant'] = TEST_GLOBAL;
-        $this->load->view("test_variables_view", $data);
+        $this->view("test_variables_view", $data);
     }
 
     public function multipleviews()

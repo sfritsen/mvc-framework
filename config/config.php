@@ -48,7 +48,7 @@ $config['app_name'] = 'diy_framework';
  * 
  * Will always use the index method of the given controller
  */
-$config['default_controller'] = 'welcome';
+// $config['default_controller'] = 'welcome';
 
 /**
  * ---------------------------------------------------------------------
