@@ -1,21 +1,24 @@
-<h1 class="display-4">PYT Framework</h1>
-<small class="text-muted">Developed by Stephen Fritsen</small>
-<br>
-<small class="text-muted">Version: Alpha</small>
-<hr>
+<div class="container">
 
-<p class="lead">
-    The Danish word "Pyt" is usually expressed as an interjection in reaction to a daily hassle, 
-    frustration or mistake.
-</p>
+    <h1 class="display-4">MVC Framework</h1>
+    <small class="text-muted">Developed by Stephen Fritsen</small>
+    <br>
+    <small class="text-muted">Version: Alpha</small>
+    <hr>
 
-<p>
-    “Don’t worry about it,” “stuff happens” or “oh, well” ... all translate in English from Pyt. 
-    Essentially Pyt was inspired by frequent usage of popular PHP frameworks such as Laravel and CodeIgniter. 
-    It isn't magic but it will help you create applications faster with less hassle.
-</p>
+    <blockquote class="blockquote">
+        <p class="mb-0">"Do not reinvent the wheel."</p>
+        <footer class="blockquote-footer">Reddit</footer>
+    </blockquote>
 
-<p>
-    Pyt is still in early development and was originally started as a learning project.  Please do not use Pyt 
-    for production sites as many features are still missing.
-</p>
+    <p>
+        This is not a wheel nor a production ready framework.
+    </p>
+
+    <p>
+        It was inspired by frequent usage of popular PHP frameworks such as Laravel and CodeIgniter. 
+        This was created as a learning project since it cannot hurt to have a better understanding
+        of how frameworks do their magic.
+    </p>
+
+</div>
