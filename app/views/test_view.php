@@ -5,5 +5,6 @@
     <p><?php echo $mytestvars['var1']; ?></p>
     <p><?php echo $badstuff; ?></p>
     <p><?php echo $mytestarray; ?></p>
-  
+
+<?php include('public/nav.php'); ?>
 <?php include('partials/footer.php'); ?>

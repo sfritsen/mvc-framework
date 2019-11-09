@@ -5,5 +5,5 @@
     <?php echo "Controller variable: ".$data['var1']; ?>
     <br>
     <?php echo "Constant variable: ".$data['constant']; ?>
-    
+    <?php include('public/nav.php'); ?>
 <?php //include('partials/footer.php'); ?>

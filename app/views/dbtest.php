@@ -13,5 +13,5 @@
 <p>
 <?php echo $badstuff; ?>
 </p>
-
+<?php include('public/nav.php'); ?>
 <?php include('partials/footer.php'); ?>

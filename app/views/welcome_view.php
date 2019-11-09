@@ -3,7 +3,7 @@
     <h1 class="display-4">MVC Framework</h1>
     <small class="text-muted">Developed by Stephen Fritsen</small>
     <br>
-    <small class="text-muted">Version: Alpha</small>
+    <small class="text-muted">Version: Development</small>
     <hr>
 
     <blockquote class="blockquote">
@@ -17,8 +17,10 @@
 
     <p>
         It was inspired by frequent usage of popular PHP frameworks such as Laravel and CodeIgniter. 
-        This was created as a learning project since it cannot hurt to have a better understanding
+        Created as a learning project since it cannot hurt to have a better understanding
         of how frameworks do their magic.
     </p>
+
+    <?php include('public/nav.php'); ?>
 
 </div>

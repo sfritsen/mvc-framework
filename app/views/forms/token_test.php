@@ -5,3 +5,4 @@
     <?php echo csrf_input(); ?>
 
 </form>
+<?php include('public/nav.php'); ?>
