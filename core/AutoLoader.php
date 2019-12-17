@@ -6,7 +6,7 @@
  * ---------------------------------------------------------------------
  *
  * Anonymous function loading using PHPs 
- * spl_autoload_regiater
+ * spl_autoload_register
  * 
  * @param string $class
 */

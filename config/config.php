@@ -29,7 +29,7 @@ $config['root_dir'] = '';
  * 
  * Must include trailing slash!
  */
-$config['base_url'] = 'https://fritsen.dev/mvc-framework/';
+$config['base_url'] = 'https://shadea.ca/mvc-framework/';
 
 /**
  * ---------------------------------------------------------------------
