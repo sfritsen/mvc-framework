@@ -13,7 +13,8 @@
  * @param string Route - index.php or /index.php
  * @param string Controller@function
 */
-Route::get('/index.php', 'Welcome@index');
+$route->get('/index.php', 'Welcome@index');
+// Route::get('/index.php', 'Welcome@index');
 
 /**
  * ---------------------------------------------------------------------
@@ -29,34 +30,37 @@ Route::get('/index.php', 'Welcome@index');
 */
 
 // Views testing
-Route::get('/index_test', 'Test_views@index');
-Route::get('/data_in_view', 'Test_views@data_in_view');
-Route::get('/variables', 'Test_views@constant_variable');
-Route::get('/multipleviews', 'Test_views@multipleviews');
+$route->get('/index_test', 'Test_views@index');
+// Route::get('/index_test', 'Test_views@index');
+// Route::get('/data_in_view', 'Test_views@data_in_view');
+// Route::get('/variables', 'Test_views@constant_variable');
+// Route::get('/multipleviews', 'Test_views@multipleviews');
 
-// URI testing
-Route::get('/segments', 'Test_uri@seg_test1');
-Route::get('/seg_pass1', 'Test_uri@seg_pass1');
-Route::get('/seg_pass2', 'Test_uri@seg_pass2');
-Route::get('/redirect_helper', 'Test_uri@redirect_helper');
-Route::get('/redirect_landing', 'Test_uri@redirect_landing');
+// // URI testing
+// Route::get('/segments', 'Test_uri@seg_test1');
+// Route::get('/seg_pass1', 'Test_uri@seg_pass1');
+// Route::get('/seg_pass2', 'Test_uri@seg_pass2');
+// Route::get('/redirect_helper', 'Test_uri@redirect_helper');
+// Route::get('/redirect_landing', 'Test_uri@redirect_landing');
 
-// Session testing
-Route::get('/session_set', 'Test_session@session_test');
-Route::get('/session_single', 'Test_session@set_single');
-Route::get('/session_check', 'Test_session@session_test2');
-Route::get('/session_destroy', 'Test_session@session_test3');
+// // Session testing
+// Route::get('/session_set', 'Test_session@session_test');
+// Route::get('/session_single', 'Test_session@set_single');
+// Route::get('/session_check', 'Test_session@session_test2');
+// Route::get('/session_destroy', 'Test_session@session_test3');
 
-// Error testing
-Route::get('/error1', 'Test_errors@error1');
-Route::get('/dbtest', 'Test_errors@dbtest');
+// // Error testing
+// Route::get('/error1', 'Test_errors@error1');
+// Route::get('/dbtest', 'Test_errors@dbtest');
 
-// Form testing
-Route::get('/csrf_test', 'Test_forms@csrf_test');
-Route::post('/csrf_test_submit', 'Test_forms@csrf_test_submit');
+// // Form testing
+// Route::get('/csrf_test', 'Test_forms@csrf_test');
+// Route::post('/csrf_test_submit', 'Test_forms@csrf_test_submit');
+$route->get('/csrf_test', 'Test_forms@csrf_test');
+$route->post('/csrf_test_submit', 'Test_forms@csrf_test_submit');
 
-// Helpers testing
-Route::get('/epoch', 'Test_helpers@epoch');
-Route::get('/date2epoch', 'Test_helpers@date2epoch');
-Route::get('/baseurltest', 'Test_helpers@baseurltest');
-Route::get('/mytesthelper', 'Test_helpers@mytesthelper');
+// // Helpers testing
+// Route::get('/epoch', 'Test_helpers@epoch');
+// Route::get('/date2epoch', 'Test_helpers@date2epoch');
+// Route::get('/baseurltest', 'Test_helpers@baseurltest');
+// Route::get('/mytesthelper', 'Test_helpers@mytesthelper');
