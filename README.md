@@ -1,4 +1,5 @@
 ## Homebrew PHP MVC Framework
+A simple DIY php framework meant for learning only.
 
 ### ToDo
 - [ ] Database sessions
